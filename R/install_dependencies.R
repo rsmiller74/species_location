@@ -12,7 +12,7 @@
 
 install_dependencies <-function(packages=c('torchvision', 'torch', 'magick', 
                                            'shiny', 'shinyFiles', 'shinyBS', 
-                                           'shinyjs', 'rappdirs', 'fs', 'operators')) {
+                                           'shinyjs', 'rappdirs', 'fs', 'operators','readr')) {
   cat(paste0("checking package installation on this computer"))
   libs<-unlist(list(packages))
   req<-unlist(lapply(libs,require,character.only=TRUE))
