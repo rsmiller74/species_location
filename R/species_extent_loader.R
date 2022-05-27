@@ -8,7 +8,8 @@
 species_extent_loader <- function(){
   
   #--Download Species Extent Data
-  data.path <- download_cache(url="https://raw.githubusercontent.com/TabakM/CameraTrapDetectoR/main/Data/species.extent.data.csv")
+  data.path <- download_cache(url="https://raw.githubusercontent.com/TabakM/CameraTrapDetectoR/main/Data/taxa.extent.data.RDS")
+  #data.path <- download_cache(url="https://raw.githubusercontent.com/TabakM/CameraTrapDetectoR/main/Data/species.extent.data.csv")
   
   #--Read Species Extent Data
   extent.data<-readRDS(data.path)
