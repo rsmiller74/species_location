@@ -227,7 +227,7 @@ deploy_model <- function(
   #-- Make dataframe of possible labels using species range data
   if(is.null(location)==FALSE){
     
-    cat(paste0("\nDetermining possible taxa based on location using longitude ",location[1]," latitude ",location[2]))
+    cat(paste0("\nDetermining possible taxa based on location using longitude ",location[1]," latitude ",location[2],"\n"))
     
     #Load species extent data
     extent.data <- species_extent_loader()
