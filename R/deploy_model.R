@@ -230,7 +230,10 @@ deploy_model <- function(
     cat(paste0("\nDetermining possible taxa based on location using longitude ",location[1]," latitude ",location[2]))
     
     #Load species extent data
-    extent.data <- species_extent_loader()
+    #extent.data <- species_extent_loader()
+    data.path <- download_cache(url="https://raw.githubusercontent.com/TabakM/CameraTrapDetectoR/main/Data/species.extent.data.csv")
+    
+    extent.data<-read.csv(data.path, stringsAsFactors=TRUE)
     
     #Get possible species
     location <- data.frame(longitude=location[1], latitude=location[2])
